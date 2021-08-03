@@ -24,14 +24,13 @@ jobs:
       shell: cmd
       run: |
         git fetch
-        
         Xcopy .\Skyline ..\ /e /h /c /i
         git checkout gh-pages
         cd ..
         cd public
         Xcopy . ..\Skyline\ /e /h /c /i /y
         cd ..
-        cd Marvel
+        cd Skyline
         git config --global user.email "jonathanhoffstadt@yahoo.com"
         git config --global user.name "Jonathan Hoffstadt"
         git commit -a -m "Update site"
